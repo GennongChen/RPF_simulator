@@ -9,3 +9,16 @@ Install from source:
 ```
 git clone https://www.github.com/GennongChen/RPF_simulator
 ```
+## Tutorial
+1. Input files  
+  * Genome (fasta)  
+  * Gencode annotation (gtf)  
+  * Configration file  
+2. Parameters  
+  * "-m": minimum length of AA length  
+  * "-s": substitution rate  
+  * "-s": indel rate  
+  * "-e": sequencing error rate  
+3. Output files
+  * Out file (contain ORF information, raw simulated reads and reads with snv)  
+  * Fasta file (simulated reads with snv and sequencing error)  
