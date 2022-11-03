@@ -14,6 +14,7 @@ conda activate RPF_simulator
 pip install numpy==1.16.5
 pip install Biopython==1.73
 pip install yaml==5.1.2
+
 git clone https://www.github.com/GennongChen/RPF_simulator
 ```
 ## Tutorial
@@ -21,7 +22,7 @@ git clone https://www.github.com/GennongChen/RPF_simulator
 ### 1. Prepare transcript and ORF index  
 ```
 mkdir -p ${out_dir} && cd ${out_dir}
-python prepare_transcripts.py \
+python RPF_simulator/prepare_transcripts.py \
     -g ${gtf} \
     -f ${fa} \
     -o ${out_dir}
@@ -53,7 +54,7 @@ Note: CCDS_ORF_num * read_length_proportion_k / 100 must be a integer.
 
 ### 3. Simulate RPF reads with SNV and sequencing error
 ```
-python orf_feature.py \
+python RPF_simulator/orf_feature.py \
     -c ${config} \
     -a ${out_dir} \
     -o ${output_file} \
