@@ -19,6 +19,8 @@ python /home/chengennong/code-manual/vscode/ORFfinding/simulator/prepare_transcr
     -f ${fa} \
     -o ${out_dir}
 ```
+This step is used to generate ORF information and is used to subsequently generate simulation data.  
+
 #### Parameters  
   **-f/--fasta**  
     &emsp;&emsp;Human/Mouse genome sequences file. (fasta format)  
@@ -27,7 +29,6 @@ python /home/chengennong/code-manual/vscode/ORFfinding/simulator/prepare_transcr
   **-o/--out_dir**  
     &emsp;&emsp;Annotation directory name. This directory is necessary for subsequent step.  
 
-This step is used to generate ORF information and is used to subsequently generate simulation data.  
 
 ### 2. Fill in the configration file
 ```
@@ -55,6 +56,11 @@ python /home/chengennong/code-manual/vscode/ORFfinding/simulator/orf_feature.py 
     -e 0.005 \
     -m 7 > ${log}
 ```
+This step mainly contains three parts:  
+    &emsp;&emsp;Step1: Produce P-site tracks form the beginning to the distant position (determined by configration) and generate their corresponding coverage area anchored by a specific read length and offset.  
+    &emsp;&emsp;Step2: Give each P-site track a CCDS ORF (filtered by parameters and transcript attribute), simualte substitution and indel (determined by parameters) to the corresponding transcript sequence and extract reads by corrected position with or without 5'utr indel.  
+    &emsp;&emsp;Step3: Simualte sequencing error (determined by parameters) to simulated RPF reads generated in Step2 and output the information of simualtion data to a txt file and simulated reads to a fasta file.
+
 #### Parameters  
   **-c/--config_file**  
     &emsp;&emsp;Configration file.  
@@ -79,7 +85,3 @@ python /home/chengennong/code-manual/vscode/ORFfinding/simulator/orf_feature.py 
   **output_fastae**  
     &emsp;&emsp;Simulated reads with snv and sequencing error)  
 
-This step mainly contains three parts:  
-    &emsp;&emsp;Step1: Produce P-site tracks form the beginning to the distant position (determined by configration) and generate their corresponding coverage area anchored by a specific read length and offset.  
-    &emsp;&emsp;Step2: Give each P-site track a CCDS ORF (filtered by parameters and transcript attribute), simualte substitution and indel (determined by parameters) to the corresponding transcript sequence and extract reads by corrected position with or without 5'utr indel.  
-    &emsp;&emsp;Step3: Simualte sequencing error (determined by parameters) to simulated RPF reads generated in Step2 and output the information of simualtion data to a txt file and simulated reads to a fasta file.
