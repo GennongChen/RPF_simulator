@@ -2,20 +2,26 @@
 RPF_simulator is a user-friendly tool to simulate ribosome protected fragments(ribo-seq data) with different periodicity in ORFs.
 RPF_simulator is based on python3
 ## Dependencies
-* Numpy
-* Biopython
-* yaml
+* python==3.6.7
+* numpy==1.16.5
+* Biopython==1.73
+* yaml==5.1.2
 ## Installation
 Install from source:
 ```
+conda install -n RPF_simulator python=3.6.7
+conda activate RPF_simulator
+pip install numpy==1.16.5
+pip install Biopython==1.73
+pip install yaml==5.1.2
 git clone https://www.github.com/GennongChen/RPF_simulator
 ```
 ## Tutorial
 
 ### 1. Prepare transcript and ORF index  
 ```
-mkdir -p $out_dir && cd $out_dir
-python /home/chengennong/code-manual/vscode/ORFfinding/simulator/prepare_transcripts.py \
+mkdir -p ${out_dir} && cd ${out_dir}
+python prepare_transcripts.py \
     -g ${gtf} \
     -f ${fa} \
     -o ${out_dir}
@@ -47,7 +53,7 @@ Note: CCDS_ORF_num * read_length_proportion_k / 100 must be a integer.
 
 ### 3. Simulate RPF reads with SNV and sequencing error
 ```
-python /home/chengennong/code-manual/vscode/ORFfinding/simulator/orf_feature.py \
+python orf_feature.py \
     -c ${config} \
     -a ${out_dir} \
     -o ${output_file} \
