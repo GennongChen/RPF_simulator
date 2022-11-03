@@ -89,7 +89,7 @@ This step mainly contains three parts:
 
 #### Output files
   **output_file**  
-    &emsp;&emsp;Contain ORF information, raw simulated reads and reads with snv)  
+    &emsp;&emsp;Contain ORF information, raw simulated reads and reads with snv.  
   **output_fastae**  
-    &emsp;&emsp;Simulated reads with snv and sequencing error)  
+    &emsp;&emsp;Simulated reads with snv and sequencing error.  
 
