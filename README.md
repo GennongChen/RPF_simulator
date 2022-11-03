@@ -52,15 +52,13 @@ This step mainly contains three parts:
 python /home/chengennong/code-manual/vscode/ORFfinding/simulator/orf_feature.py \
     -c ${config} \
     -a ${out_dir} \
-    -o ${out_file} \
-    -f ${T1_fasta} \
+    -o ${output_file} \
+    -f ${output_fasta} \
     -s 0.001 \
     -i 0.0001 \
     -e 0.005 \
     -m 7 > ${log}
 ```
-
-  * Configration file  
 #### Parameters  
   **-c/--config_file**  
     Configration file  
@@ -79,7 +77,8 @@ python /home/chengennong/code-manual/vscode/ORFfinding/simulator/orf_feature.py 
   **-f/--output_fasta**  
     Final simulated reads. (fasta format)  
 
-
-3. Output files
-  * Out file (contain ORF information, raw simulated reads and reads with snv)  
-  * Fasta file (simulated reads with snv and sequencing error)  
+#### Output files
+  **output_file**  
+    Contain ORF information, raw simulated reads and reads with snv)  
+  **output_fastae**  
+    Simulated reads with snv and sequencing error)  
