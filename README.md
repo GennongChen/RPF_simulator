@@ -4,6 +4,7 @@ RPF_simulator is based on python3
 ## Dependencies
 * Numpy
 * Biopython
+* yaml
 ## Installation
 Install from source:
 ```
