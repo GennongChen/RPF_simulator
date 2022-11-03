@@ -1,6 +1,6 @@
 # RPF_simulator
-RPF_simulator is a user-friendly tool to simulate ribosome protected fragments(ribo-seq data) with different periodicity in ORFs.
-RPF_simulator is based on python3
+RPF_simulator is a user-friendly tool to simulate ribosome protected fragments(ribo-seq data) with different periodicity in ORFs.  
+RPF_simulator is based on python3.
 ## Dependencies
 * python==3.6.7
 * numpy==1.16.5
