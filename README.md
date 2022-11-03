@@ -49,7 +49,7 @@ periodicty: [[3,3,3],[5,3,2],[6,3,1],[7,2,1],[8,1,1],[9,1,0],[8,1,1],[7,2,1],[6,
 predicted_status: [0,0,1,1,1,1,1,1,1,0,0]
 read_length_proportion: [2.35, 2.99, 5.16, 8.93, 13.68, 17.8, 15.2, 15.2, 10.1, 4.74, 3.85]
 ```
-Note: The sum of read_length_proportion must be equal to 100.
+Note: The sum of read_length_proportion must be equal to 100.  
 Note: CCDS_ORF_num * read_length_proportion_k / 100 must be a integer.
 
 ### 3. Simulate RPF reads with SNV and sequencing error
