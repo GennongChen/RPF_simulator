@@ -2,6 +2,7 @@
 #https://github.com/xryanglab/RiboCode/blob/master/RiboCode/prepare_transcripts.py
 # -*- coding:UTF-8 -*-
 __author__ = 'Zhengtao Xiao'
+#Modified by Gennong Chen
 from builtins import range,object
 
 """
