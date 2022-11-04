@@ -1,0 +1,21 @@
+
+reads_num: 10000000
+CCDS_ORF_num: 10000
+
+
+read_length: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+offset: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+periodicty: [[3,3,3],[5,3,2],[6,3,1],[7,2,1],[8,1,1],[9,1,0],[8,1,1],[7,2,1],[6,3,1],[5,3,2],[3,3,3]]
+predicted_status: [0,0,1,1,1,1,1,1,1,0,0]
+read_length_proportion: [2.35, 2.99, 5.16, 8.93, 13.68, 17.8, 15.2, 15.2, 10.1, 4.74, 3.85]
+
+#read_length: [27, 28, 29, 30, 31, 32]
+#periodicty: [[3,3,3],[5,3,2],[6,3,1],[7,2,1],[8,1,1],[9,1,0]]
+#predicted_status: [0,0,1,1,1,1]
+#offset: [12, 12, 12, 12, 12, 12]
+#read_length_proportion: [6, 15, 30, 30, 15, 4]
+
+#reads_num_per_length: [(int(reads_num / 100 * x)) for x in read_length_proportion]
+#ORF_num_per_length: [(int(CCDS_ORF_num / 100 * x)) for x in read_length_proportion]
+#codon_num: list(map(lambda x= int(x[0] / x[1] / sum(x[2])), zip(reads_num_per_length, ORF_num_per_length,periodicty)))
+#psite_track_per_length: list(map(lambda x= [x[0] * x[1]] * x[2], zip(periodicty, codon_num, ORF_num_per_length)))
